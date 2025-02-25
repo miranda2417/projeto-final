@@ -25,10 +25,9 @@ async function searchRecipes(ingredient) {
 function showRecipes(recipes) {
   recipeList.innerHTML = recipes.map(
       (item) => `
-        <div class="recipe-card" onclick="getRecipesDetails(${item.idMeal})">
+        <div class="recipe-card" onclick="searchRecipesDetails(${item.idMeal})">
             <img src="${item.strMealThumb}" alt="receita-foto">
             <h3>${item.strMeal}</h3>
-
         </div>
         `,
     )
